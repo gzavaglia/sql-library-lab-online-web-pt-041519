@@ -28,6 +28,8 @@ def select_name_and_series_subgenres_of_authors
   # ON subgenres.id = series.subgenre_id;"
       'SELECT authors.name, subgenres.name
       FROM authors
+      JOIN series
+      ON author_id = series
       '
 end
 
